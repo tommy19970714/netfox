@@ -171,7 +171,7 @@ open class NFX: NSObject
         self.ignoredURLs.append(url)
     }
     
-    internal func getLastVisitDate() -> Date
+    open func getLastVisitDate() -> Date
     {
         return self.lastVisitDate
     }
