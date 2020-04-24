@@ -9,9 +9,9 @@ import Foundation
 
 private let _sharedInstance = NFXHTTPModelManager()
 
-final class NFXHTTPModelManager: NSObject
+open class NFXHTTPModelManager: NSObject
 {
-    static let sharedInstance = NFXHTTPModelManager()
+    public static let sharedInstance = NFXHTTPModelManager()
     fileprivate var models = [NFXHTTPModel]()
     private let syncQueue = DispatchQueue(label: "NFXSyncQueue")
     
@@ -31,7 +31,7 @@ final class NFXHTTPModelManager: NSObject
         }
     }
     
-    func getModels() -> [NFXHTTPModel]
+    open func getModels() -> [NFXHTTPModel]
     {        
         var predicates = [NSPredicate]()
         
