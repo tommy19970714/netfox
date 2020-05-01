@@ -23,7 +23,7 @@ open class NFXHTTPModelManager: NSObject
         }
     }
     
-    func clear()
+    open func clear()
     {
         syncQueue.async {
             self.models.removeAll()
