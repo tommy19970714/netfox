@@ -15,5 +15,6 @@ class WebViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         webView.loadRequest(URLRequest(url: URL(string: "https://github.com/kasketis/netfox")!))
+        webView.allowsInlineMediaPlayback = true
     }
 }
